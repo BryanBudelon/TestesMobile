@@ -4,6 +4,7 @@
 	<title>Page Title</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text-html"; charset="UTF-8"/>
 
 	<link rel="stylesheet" href="css/jquery.mobile-1.4.0.min.css" />
 	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
@@ -24,15 +25,15 @@
 </head>
 <body>
 
-<div data-role="page">
+<div data-role="page" id="inicial">
 
 	<div data-role="header">
-		<h1>Page Title</h1>
+		<h1>Página Inicial</h1>
 	</div><!-- /header -->
 	<div data-role="navbar">
     <ul>
-        <li><a href="Pagina.html" class="ui-btn-active">One</a></li>
-        <li><a href="#"><img></a></li>
+        <li><a href="#inicial" class="ui-btn-active">Página Inicial</a></li>
+        <li><a href="#secundaria"><img>Contato</a></li>
     </ul>
 </div>
 	<div role="main" class="ui-content">
@@ -40,10 +41,46 @@
 		<button class="ui-btn ui-btn-inline" onclick="stopAudio();">Pause</button>
 	</div><!-- /content -->
 
-	<div data-role="footer">
-		<h4>Page Footer</h4>
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#">One</a></li>
+				<li><a href="#">Two</a></li>
+				<li><a href="#">Three</a></li>
+			</ul>
+		</div>
 	</div><!-- /footer -->
 </div><!-- /page -->
+
+<div data-role="page" id="secundaria">
+
+	<div data-role="header">
+		<h1>Contato</h1>
+	</div><!-- /header -->
+	<div data-role="navbar">
+    <ul>
+        <li><a href="#inicial" class="ui-btn-active">Página Inicial</a></li>
+        <li><a href="#secundaria"><img>Contato</a></li>
+    </ul>
+</div>
+	<div role="main" class="ui-content">
+		<button class="ui-btn ui-btn-inline" onclick="playAudio();">Play</button>
+		<button class="ui-btn ui-btn-inline" onclick="stopAudio();">Pause</button>
+
+       	<img src="img/fundo_vertical.png" alt="image" style="position: absolute; top: 50%; left: 50%;"/>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#" data-icon="stars">Home</a></li>
+				<li><a href="#" data-icon="star">Two</a></li>
+				<li><a href="#" data-icon="star">Three</a></li>
+			</ul>
+		</div>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
 
 </body>
 </html>
